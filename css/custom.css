@@ -1,73 +1,132 @@
-*{
-    font-family: 'Raleway', sans-serif;
+* {
+  font-family: "Raleway", sans-serif;
 }
 .material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-  
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-  }
-  /* Rules for sizing the icon. */
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
 
 /* Rules for using icons as black on a light background. */
-.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
 
 /* Rules for using icons as white on a dark background. */
-.material-icons.md-light { color: rgba(255, 255, 255, 1); }
-.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-
-.my-primary{
-    /* background-color: #ba7e08; */
-    background-color: #1a943f;
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
 }
 
-header#main-header{
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-}
-main{
-    background-color: rgb(236, 236, 236);
-    min-height: calc( 100vh - 35px );
-}
-.carouse-wrapper{
-    -webkit-column-count: 4;
-    -moz-column-count: 4;
-    column-count: 4;
-    -webkit-column-width: 33%;
-    -moz-column-width: 33%;
-    column-width: 33%;
-}
-.carouse-wrapper > img{
-    width: 100%;
-    margin-bottom: 10px;
+.my-primary {
+  /* background-color: #ba7e08; */
+  background-color: #1a943f;
 }
 
-main#main-wrapper::before{
-    content: '';
-    display: block;
-    height: 120px;
+header#main-header {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+header#main-header nav#main-navigation-bar .navbar-collapse .nav-link {
+  font-size: 14px;
+}
+main {
+  background-color: rgb(236, 236, 236);
+  min-height: calc(100vh - 35px);
+}
+.post-carouse-wrapper {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+}
+.post-carouse-wrapper .single-post-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.post-carouse-wrapper .single-post-wrapper:before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+.post-carouse-wrapper .single-post-wrapper:hover::before {
+  opacity: 60%;
+}
+.post-carouse-wrapper .single-post-wrapper .post-title {
+  position: absolute;
+  transition: all 0.2s ease-out;
+  color: white;
+  transform: translate(20px, 0px);
+  font-weight: bolder;
+  opacity: 0;
+  width: 80%;
+}
+.post-carouse-wrapper .single-post-wrapper:hover .post-title {
+  opacity: 100%;
+  transform: translate(20px, 20px);
+}
+.post-carouse-wrapper .single-post-wrapper .post-excerpt {
+  position: absolute;
+  transition: all 0.2s ease-out;
+  color: white;
+  transform: translate(20px, 0px);
+  font-weight: lighter;
+  opacity: 0;
+  width: 80%;
+}
+.post-carouse-wrapper .single-post-wrapper:hover .post-excerpt {
+  opacity: 100%;
+  transform: translate(20px, 50px);
+}
+
+main#main-wrapper::before {
+  content: "";
+  display: block;
+  height: 120px;
 }

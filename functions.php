@@ -17,6 +17,7 @@
 
     add_action( 'wp_enqueue_scripts', 'load_stylesheets' );
     add_action( 'wp_enqueue_scripts', 'load_scripts' );
+    add_theme_support( 'post-thumbnails' ); 
     
 
 
