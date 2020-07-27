@@ -19,7 +19,7 @@
                     dummy@gmail.com
                 </div>
                 <div>
-                    <img class="mr-4" src="<?php echo get_template_directory_uri().'./img/facebook.svg'?>" width="8px" alt="">
+                    <img class="mr-4" src="<?php echo get_template_directory_uri().'/img/facebook.svg'?>" width="8px" alt="">
                     <img src="<?php echo get_template_directory_uri().'/img/youtube.svg'?>" width="16px" alt="">
                 </div>
             </div>
